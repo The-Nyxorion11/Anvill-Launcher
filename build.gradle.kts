@@ -4,6 +4,7 @@ plugins {
     id("org.javamodularity.moduleplugin") version "1.8.15"
     id("org.openjfx.javafxplugin") version "0.0.13"
     id("org.beryx.jlink") version "2.25.0"
+    kotlin("jvm") version "2.0.21"
 }
 
 group = "uma.anvill"
@@ -39,6 +40,7 @@ dependencies {
     implementation("org.controlsfx:controlsfx:11.2.1")
     implementation("org.kordamp.ikonli:ikonli-javafx:12.3.1")
     implementation("org.kordamp.bootstrapfx:bootstrapfx-core:0.4.0")
+    implementation("org.jetbrains.kotlin:kotlin-stdlib")
     implementation("com.github.almasb:fxgl:17.3") {
         exclude(group = "org.openjfx")
         exclude(group = "org.jetbrains.kotlin")
