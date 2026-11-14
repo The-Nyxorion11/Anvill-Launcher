@@ -1,0 +1,12 @@
+module uma.anvill.anvilllauncher {
+    requires javafx.controls;
+    requires javafx.fxml;
+
+    requires org.controlsfx.controls;
+    requires org.kordamp.ikonli.javafx;
+    requires org.kordamp.bootstrapfx.core;
+    requires com.almasb.fxgl.all;
+
+    opens uma.anvill.anvilllauncher to javafx.fxml;
+    exports uma.anvill.anvilllauncher;
+}
