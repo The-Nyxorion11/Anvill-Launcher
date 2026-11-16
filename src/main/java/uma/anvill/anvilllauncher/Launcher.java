@@ -1,8 +1,10 @@
 package uma.anvill.anvilllauncher;
 
 import io.javalin.Javalin;
-import javafx.application.Application;
 import uma.anvill.anvilllauncher.backend.backendTest.testingApi;
+
+import java.util.Map;
+
 
 public class Launcher {
     public static void main(String[] args) {
@@ -10,12 +12,19 @@ public class Launcher {
         //MainBackend.startMainBackend();
 
         //test localHost electron
-        Javalin app = Javalin.create().start(7070);
+        Javalin app = Javalin.create(config -> {
+            config.bundledPlugins.enableCors(cors -> {
+                cors.addRule(it -> it.anyHost());
+            });
+        }).start(7070);
 
         app.post("/api/suma", ctx -> {
-             testingApi test = ctx.bodyAsClass(testingApi.class);
-            ctx.status(201).result(String.valueOf(test.n1 + test.n2));});
+            testingApi test = ctx.bodyAsClass(testingApi.class);
+            int resultado = test.n1 + test.n2;
 
+
+            ctx.status(201).json(Map.of("resultado", resultado));
+        });
 
     }
 }
