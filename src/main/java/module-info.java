@@ -14,4 +14,5 @@ module uma.anvill.anvilllauncher {
     opens uma.anvill.anvilllauncher to javafx.fxml;
 
     exports uma.anvill.anvilllauncher;
+    requires com.fasterxml.jackson.databind;
 }

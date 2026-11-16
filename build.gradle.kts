@@ -51,6 +51,7 @@ dependencies {
     implementation("com.google.code.gson:gson:2.11.0")
     implementation("io.javalin:javalin:6.7.0")
     implementation("org.slf4j:slf4j-simple:2.0.16")
+    implementation("com.fasterxml.jackson.core:jackson-databind:2.23.0")
 }
 
 tasks.withType<Test> {
