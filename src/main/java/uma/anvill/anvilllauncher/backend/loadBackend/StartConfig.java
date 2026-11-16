@@ -7,6 +7,7 @@ public class StartConfig {
     public void onEnable()  {
         //configure .minecraft
         ConfigFiles configFiles = new ConfigFiles();
+
         try {
             configFiles.setFiles();
         } catch (IOException e) {

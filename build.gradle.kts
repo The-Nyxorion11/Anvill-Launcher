@@ -37,6 +37,7 @@ javafx {
 }
 
 dependencies {
+
     implementation("org.controlsfx:controlsfx:11.2.1")
     implementation("org.kordamp.ikonli:ikonli-javafx:12.3.1")
     implementation("org.kordamp.bootstrapfx:bootstrapfx-core:0.4.0")
@@ -48,7 +49,8 @@ dependencies {
     testImplementation("org.junit.jupiter:junit-jupiter-api:${junitVersion}")
     testRuntimeOnly("org.junit.jupiter:junit-jupiter-engine:${junitVersion}")
     implementation("com.google.code.gson:gson:2.11.0")
-
+    implementation("io.javalin:javalin:6.7.0")
+    implementation("org.slf4j:slf4j-simple:2.0.16")
 }
 
 tasks.withType<Test> {
