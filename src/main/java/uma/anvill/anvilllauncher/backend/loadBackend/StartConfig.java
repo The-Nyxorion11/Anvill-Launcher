@@ -1,10 +1,18 @@
 package uma.anvill.anvilllauncher.backend.loadBackend;
 
+
+import java.io.IOException;
+
 public class StartConfig {
-    public void onEnable(){
+    public void onEnable()  {
         //configure .minecraft
         ConfigFiles configFiles = new ConfigFiles();
-        configFiles.setFiles();
+        try {
+            configFiles.setFiles();
+        } catch (IOException e) {
+            System.out.println("Error: " + e.getMessage());
+        }
+
 
         //get version manifest
         MojangService mojangService = new MojangService();
