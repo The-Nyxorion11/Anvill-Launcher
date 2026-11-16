@@ -12,6 +12,7 @@ module uma.anvill.anvilllauncher {
 
     opens uma.anvill.anvilllauncher.backend.loadBackend to com.google.gson;
     opens uma.anvill.anvilllauncher to javafx.fxml;
+    opens uma.anvill.anvilllauncher.backend.backendTest to com.fasterxml.jackson.databind;
 
     exports uma.anvill.anvilllauncher;
     requires com.fasterxml.jackson.databind;
